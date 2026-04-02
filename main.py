@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--full", action="store_true", help="Executa o pipeline completo (Download + Processamento).")
 
     # Parâmetros customizáveis
-    parser.add_argument("--apikey", type=str, help="API Key do Elsevier.")
+    parser.add_argument("--apikey", type=str, help="Chave da API necessária para baixar as imagens.")
     parser.add_argument("--id", type=str, help="ID do arquivo no Google Drive (opcional se já definido no script).")
     parser.add_argument("--dest", type=str, default="data/imgs/", help="Pasta de destino das imagens.")
 

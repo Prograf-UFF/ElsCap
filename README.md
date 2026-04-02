@@ -1,15 +1,43 @@
 # ElsCap
 We created the ElsCap dataset, meticulously compiled from a vast collection of open-access scientific articles on the ScienceDirect platform, a comprehensive repository of peer-reviewed academic literature managed by Elsevier.
 
-meu_projeto_dataset/
+## Project Structure
+
+ELSCAP/
 │
-├── data/                  # Pasta onde as imagens serão salvas
-|  ├── imgs/               # Pasta para as imagens
-|  ├── info/               # Pasta para os arquivos JSON baixados
+├── data/                  # Folder where the images will be saved.
+|  ├── imgs/               # Folder for the images
+|  ├── info/               # Folder for downloaded JSON files
 │
-├── main.py                # Ponto de entrada (orquestra o processo)
-├── downloader_info.py          # Lógica para baixar do Google Drive
-├── processor.py           # Lógica para ler os JSONs e extrair URLs das imagens e baixar
+├── main.py                # Entry point (orchestrates the process)
+├── downloader_info.py     # Logic for downloading from Google Drive
+├── processor.py           # Logic for reading JSONs, extracting URLs from images, and downloading them.
 │
-├── requirements.txt       # Bibliotecas necessárias (gdown, requests)
-└── README.md              # Documentação do projeto
+├── requirements.txt       # Required libraries (gdown, requests)
+└── README.md              # Project documentation
+
+
+- `main.py`: Entry point with a Command Line Interface (CLI).
+- `downloader_info.py`: Manages Google Drive downloads and ZIP extraction.
+- `processor.py`: Parses JSON metadata and handles image downloads via API.
+- `data/`: Destination directory for organized downloaded images.
+
+## JSON Metadata Structure
+
+The script processes metadata extracted from scientific articles. The following image describes the data hierarchy:
+
+![JSON Structure](./structure_json.png)
+
+Key fields processed include:
+- **Paper**: DOI and PII identifiers.
+- **Figure**: Captions and figure types.
+- **Image**: High-resolution URL for asset retrieval.
+- **Paragraphs**: Contextual text surrounding figure citations.
+
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have the required libraries installed:
+```bash
+pip install gdown requests
+```
