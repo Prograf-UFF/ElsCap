@@ -76,3 +76,24 @@ python main.py --process --apikey "YOUR_API_KEY"
 | `--apikey` | The API key required to authorize image downloads from the provider.|
 
 More information on obtaining the API key can be found here: https://dev.elsevier.com/
+
+## Citation
+
+If you find this work, the ElsCap dataset, useful for your research, please cite our paper:
+
+**Full Reference:**
+> Autores. "Multimodal Embedding for Scientific Image Caption Generation" *VISAPP*, 2026.
+
+**BibTeX:**
+```bibtex
+@inproceedings{visapp26_huillca_fernandes,
+    author={Jose Huillca and Leandro Fernandes},
+    title={Multimodal Embedding for Scientific Image Caption Generation},
+    booktitle={Proceedings of the 21st International Conference on Computer Vision Theory and Applications - Volume 1: VISAPP},
+    year={2026},
+    pages={87-98},
+    publisher={SciTePress},
+    organization={INSTICC},
+    doi={10.5220/0014338800004084},
+    isbn={978-989-758-804-4},
+}
